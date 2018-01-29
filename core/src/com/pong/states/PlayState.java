@@ -130,10 +130,10 @@ public class PlayState extends State implements InputProcessor {
     public boolean touchDragged(int screenX, int screenY, int pointer) {
         Rectangle paddle1Bounds = paddle1.getBounds();
         Rectangle paddle2Bounds = paddle2.getBounds();
-        if (paddle1.isHuman() && screenX > 0 && screenX < paddle1.getTexture().getWidth()*4) {
+        if (paddle1.isHuman() && screenX > 0 && screenX < MyGdxGame.WIDTH/2) {
             paddle1.setPosition(MyGdxGame.HEIGHT - screenY);
         }
-        if (paddle2.isHuman() && (screenX < MyGdxGame.WIDTH && screenX > (MyGdxGame.WIDTH - (paddle2.getTexture().getWidth()* 4)))) {
+        if (paddle2.isHuman() && (screenX < MyGdxGame.WIDTH && screenX > MyGdxGame.WIDTH/2 )) {
             paddle2.setPosition(MyGdxGame.HEIGHT - screenY);
         }
 
